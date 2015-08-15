@@ -321,10 +321,12 @@ Note that they are heavily used within Grimoire as of 0.4.12 for exactly this re
 
 **0.10.\***:
 - Dropped the dependency on version-clj to resolve sorting issues with build qualifiers.
-- Upgraded to guten-tag 0.1.4
+- Upgraded to guten-tag 0.1.5
 - Deleted `grimoire.things/thing->relative-path`, depended on guten-tag < 1.3, not used.
 - Deleted `grimoire.things/thing->root-to`, depended on guten-tag < 1.3, not used.
 - Broke and fixed the version sorting order on `grimoire.api/list-versions`
+- Add a default for reading Clojure 1.7.0 unknown objects.
+- Filter out non-Grimoire directories from the root level of a datastore.
 
 **0.9.\***:
 - Added `grimoire.things/thing->url-path` for cases when Things must be URL or path safe.

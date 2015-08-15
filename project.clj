@@ -1,10 +1,10 @@
-(defproject org.clojure-grimoire/lib-grimoire "0.10.2"
+(defproject org.clojars.rmoehn/lib-grimoire "0.10.3"
   :description "A shared library for Grimoire infrastructure"
   :url "http://github.com/clojure-grimoire/lib-grimoire"
   :license {:name "Eclipse Public License"
             :url "http://www.eclipse.org/legal/epl-v10.html"}
   :dependencies [[org.clojure/clojure "1.6.0"]
-                 [me.arrdem/guten-tag "0.1.4"
+                 [org.clojars.rmoehn/guten-tag "0.1.5"
                   :exclusions [org.clojure/clojure]]
                  [org.clojure/core.match "0.3.0-alpha4"
                   :exclusions [org.clojure/clojure]]

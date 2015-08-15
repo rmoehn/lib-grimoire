@@ -10,7 +10,6 @@
             [grimoire.api.fs.impl :as impl]
             [clojure.java.io :as io]
             [clojure.string :as string]
-            [clojure.edn :as edn]
             [cemerick.url :as url]))
 
 (defn- f->name [^java.io.File f]
@@ -23,7 +22,8 @@
     (if (.isDirectory handle)
       (succeed
        (for [d     (.listFiles handle)
-             :when (.isDirectory d)]
+             :when (.isDirectory d)
+             :when (.exists (io/file d "meta.edn"))]
          (t/->Group (url/url-decode (f->name d)))))
       (fail "Could not find store directory"))))
 
@@ -177,7 +177,7 @@
       (-> handle
           slurp
           (string/replace #"#<.*?>" "nil") ;; FIXME: Hack to ignore unreadable #<>s
-          edn/read-string
+          util/edn-read-string-with-readers
           succeed)
       (fail (str "No meta for object "
                  (t/thing->path thing))))))

@@ -7,7 +7,7 @@ lib-grimoire privides a shared abstraction of a Clojure Maven entity and a set o
 
 ## Installation
 
-[![Clojars Project](http://clojars.org/org.clojure-grimoire/lib-grimoire/latest-version.svg)](http://clojars.org/org.clojure-grimoire/lib-grimoire)
+Dependency: `[org.clojars.rmoehn/lib-grimoire "0.10.3"]`
 
 Note that lib-grimoire is still pre-1.0.0, and as such is still in development and may undergo breaking changes.
 Please refer to the [Changelog](#changelog) section.
